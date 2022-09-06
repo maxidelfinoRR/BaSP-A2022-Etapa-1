@@ -202,7 +202,7 @@ aside h3 {
 
 .features div {
     float: left;
-    padding-right: 80px;
+    padding-right: 30px;
     margin-top: 30px;
     margin-bottom: 50px;
 }
@@ -254,177 +254,39 @@ aside h3 {
     color: #373867;
 }
 
-/* aside {
-    font-family: 'Roboto', sans-serif;
+.whyUse {
+    margin-left: 437px;
 }
 
-aside a {
-    text-decoration: none;
-}
-
-aside nav {
-    box-sizing: border-box;
+.whyUse h4 {
     position: absolute;
-    width: 397px;
-    height: 100vh;
-    top: 126px;
-    background: #FFFFFF;
-    border-right: 2px solid #BFBFBF;
-}    
-
-nav .nav-title-menu {
-    position: absolute;
-    left: 55px;
-    top: 80px;
-    width: 100px;
-    height: 33px;
+    left: 440px;
+    top: 1174px;
     font-weight: 700;
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 32px;
+    padding-bottom: 14px;
+    border-bottom: 4px solid #AACE9B;
     color: #373867;
 }
 
-aside nav .nav-line-menu {
-    position: absolute;
-    width: 100px;
-    height: 0px;
-    left: 55px;
-    top: 145.5px;
-    background-color: #AACE9B;
-    border: 3px solid #AACE9B;
+.whyUse img {
+    clear: both;
+    float: left;
 }
 
-aside nav .nav-list li:nth-child(1) a {
-    position: absolute;
-    left: 55px;
-    top: 212px;
-    width: 397px;
-    padding-bottom: 36px;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 35px;
-    color: #373867;
-    border-bottom: 2px solid #cdcccc;
+.whyUse article ul {
+    margin-top: 450px;
+    margin-left: 450px;
+    list-style-image: url('/Semana-02/assets/svg/Vector.svg');
 }
 
-aside nav .nav-list li:nth-child(2) a {
-    position: absolute;
-    left: 55px;
-    top: 329px;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 35px;
-    color: #373867;
-}
-
-aside nav .nav-list li:nth-child(3) a {
-    position: absolute;
-    left: 55px;
-    top: 446px;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 35px;
-    color: #373867;
-}
-
-.nav-title-contact {
-    position: absolute;
-    left: 55px;
-    top: 563px;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 35px;
-    color: #373867;
-}
-
-.nav-line-contact {
-    position: absolute;
-    width: 100px;
-    height: 0px;
-    left: 55px;
-    top: 628px;
-    background-color: #AACE9B;
-    border: 3px solid #AACE9B;
-}
-
-aside nav .nav-contact-list li:nth-child(1) a {
-    position: absolute;
-    left: 113px;
-    top: 657px;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 29px;
-    color: #373867;
-}
-
-aside nav .nav-contact-list li:nth-child(2) a {
-    position: absolute;
-    left: 113px;
-    top: 702px;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 29px;
-    color: #373867;
-}
-
-aside nav .nav-contact-list li:nth-child(3) a {
-    position: absolute;
-    left: 113px;
-    top: 742px;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 29px;
-    color: #373867;
-}
-
-.hero-section {
-    margin: 397px;
-}
-
-.hero-section h1 {
-    position: relative;
-
-    width: 473px;
-    height: 44px;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 56px;
-    letter-spacing: 0.3em;
-    color: #373867;
-}
-
-.hero-section h5 {
-    width: 565px;
-    height: 26px;
+.whyUse article ul li {
+    padding: 22px 0 22px 30px;
     font-weight: 700;
     font-size: 24px;
-    line-height: 28px;
-    text-transform: uppercase;
-    color: #AACE9B;
-}
-
-.hero-section img {
-    width: 458px;
-    height: 449px;
-}
-
-.hero-section p {
-    width: 617px;
-    height: 62px;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 28px;
     color: #373867;
 }
 
-.hero-section button {
-    padding: 14px 36px;
-    background: #FFFFFF;
-    border: 3px solid #AACE9B;
-    border-radius: 5px;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 18px;
-    text-align: center;
-    color: #AACE9B;
-} */
+form {
+    clear: both;
+}
