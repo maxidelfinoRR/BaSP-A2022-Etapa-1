@@ -1,11 +1,15 @@
-*{
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+* {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
 header {
-    width: 1512px;
+    position: fixed;
+    top:0;
+    width: 100%;
     height: 126px;
     background: #AACE9B;
+    z-index: 100;
 }
 
 header img {
@@ -20,19 +24,180 @@ header img:hover {
     cursor: pointer;
 }
 
-header input{
-    position: absolute;
-    width: 377px;
-    height: 36px;
+header div {
+    position: relative;
     left: 568px;
     top: 45px;
+    width: 10px;
+}
+
+.search {
+    position: absolute;
+    left: 15px;
+    bottom: 8px;
+}
+
+header input {
+    width: 377px;
+    height: 36px;
     background: #D8E7EB;
     border: 1px solid #D6D6D6;
     border-radius: 50px;
 }
 
 aside {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: fixed;
+    top: 126px;
+    font-family: 'Roboto', sans-serif;
+    width: 397px;
+    height: 100%;
+    padding-top: 80px;
+    border-right: 2px solid #BFBFBF;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside .nav-list li {
+    margin: 36px 0;
+    padding-bottom: 36px;
+    border-bottom: 2px solid #BFBFBF;
+}
+
+aside nav .nav-list li:nth-child(1) {
+    padding-top: 36px;
+}
+
+aside .nav-contact-list a{
+    width: 264px;
+    height: 29px;
+    font-size: 25px;
+    line-height: 29px;
+    color: #373867;
+    margin-left: 50px;
+}
+
+.email {
+    position: relative;
+    left: 55px;
+    top: 107px;
+}
+
+.phone {
+    position: relative;
+    left: 55px;
+    top: 107px;
+}
+
+.home {
+    position: relative;
+    left: 55px;
+    top: 107px;
+}
+
+aside nav .nav-contact-list li:nth-child(3) a {
+    padding-left: 50px;
+    width: 264px;
+    height: 114px;
+}
+
+aside a {
+    text-decoration: none;
+    padding-left: 55px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    color: #373867;
+}
+
+aside h3 {
+    width: 100px;
+    height: 33px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    color: #373867;
+    margin-left: 55px;
+    padding-bottom: 33px;
+    border-bottom: 3px solid #AACE9B;
+}
+
+.hero-section {
+    height: 734px;
+}
+
+.hero-section h1{
+    margin-left: 425px;
+    padding-top: 191px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: 0.3em;
+    color: #373867;
+}
+
+.hero-section h5 {
+    margin-left: 425px;
+    margin-top: 27px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #AACE9B;
+}
+
+.hero-section p {
+    width: 617px;
+    height: 62px;
+    margin-left: 425px;
+    margin-top: 36px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    color: #373867;
+}
+
+.hero-section img {
+    position: relative;
+    padding-right: 35px;
+    left: 1019px;
+    bottom: 191px;
+}
+
+.hero-section button {
+    position: relative;
+    left: 425px;
+    bottom: 367px;
+    width: 166px;
+    height: 72px;
+    background: #FFFFFF;
+    border: 3px solid #AACE9B;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #AACE9B;
+}
+
+.features {
+    margin-left: 437px;
+    background-color: #BFBFBF;
+}
+
+.features h4{
+    width: 127px;
+    padding-bottom: 14px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #373867;
+    border-bottom: 3px solid #AACE9B;
+}
+
+/* aside {
+    font-family: 'Roboto', sans-serif;
 }
 
 aside a {
@@ -47,7 +212,7 @@ aside nav {
     top: 126px;
     background: #FFFFFF;
     border-right: 2px solid #BFBFBF;
-}
+}    
 
 nav .nav-title-menu {
     position: absolute;
@@ -75,10 +240,13 @@ aside nav .nav-list li:nth-child(1) a {
     position: absolute;
     left: 55px;
     top: 212px;
+    width: 397px;
+    padding-bottom: 36px;
     font-weight: 400;
     font-size: 30px;
     line-height: 35px;
     color: #373867;
+    border-bottom: 2px solid #cdcccc;
 }
 
 aside nav .nav-list li:nth-child(2) a {
@@ -151,12 +319,15 @@ aside nav .nav-contact-list li:nth-child(3) a {
     color: #373867;
 }
 
+.hero-section {
+    margin: 397px;
+}
+
 .hero-section h1 {
-    position: absolute;
+    position: relative;
+
     width: 473px;
     height: 44px;
-    left: 425px;
-    top: 191px;
     font-weight: 700;
     font-size: 48px;
     line-height: 56px;
@@ -165,11 +336,8 @@ aside nav .nav-contact-list li:nth-child(3) a {
 }
 
 .hero-section h5 {
-    position: absolute;
     width: 565px;
     height: 26px;
-    left: 425px;
-    top: 272px;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
@@ -178,19 +346,13 @@ aside nav .nav-contact-list li:nth-child(3) a {
 }
 
 .hero-section img {
-    position: absolute;
     width: 458px;
     height: 449px;
-    left: 1019px;
-    top: 191px;
 }
 
 .hero-section p {
-    position: absolute;
     width: 617px;
     height: 62px;
-    left: 425px;
-    top: 334px;
     font-weight: 400;
     font-size: 24px;
     line-height: 28px;
@@ -198,9 +360,6 @@ aside nav .nav-contact-list li:nth-child(3) a {
 }
 
 .hero-section button {
-    position: absolute;
-    left: 425px;
-    top: 432px;
     padding: 14px 36px;
     background: #FFFFFF;
     border: 3px solid #AACE9B;
@@ -210,4 +369,4 @@ aside nav .nav-contact-list li:nth-child(3) a {
     line-height: 18px;
     text-align: center;
     color: #AACE9B;
-}
+} */
