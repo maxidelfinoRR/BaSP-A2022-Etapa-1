@@ -9,10 +9,18 @@ _During week 01 we work with the following tools:_
 
 ![](https://skills.thijs.gg/icons?i=figma)
 
-
 _During week 02 we work with the following tools:_
 
 ![](https://skills.thijs.gg/icons?i=html)
+![](https://skills.thijs.gg/icons?i=git)
+![](https://skills.thijs.gg/icons?i=github)
+
+_During week 03 we work with the following tools:_
+
+![](https://skills.thijs.gg/icons?i=html)
+![](https://skills.thijs.gg/icons?i=css)
+![](https://skills.thijs.gg/icons?i=git)
+![](https://skills.thijs.gg/icons?i=github)
 
 ---
 
