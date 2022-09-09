@@ -1,0 +1,162 @@
+.hero-section {
+    margin: 126px 0 0 0;
+}
+
+.hero-section h1 {
+    padding: 65px 0 0 0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 0.3em;
+    color: #373867;
+}
+
+.hero-section div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-section h5 {
+    margin: 80px 0 0 0;
+    padding: 15px 0 0 0;
+    font-weight: 700;
+    font-size: 1.25rem; /* 20px */
+    text-align: center;
+    text-transform: uppercase;
+    color: #AACE9B;
+}
+
+.hero-section p {
+    text-align: center;
+    padding: 0 15px;
+    margin: 50px 0;
+    font-size: 1rem;
+    color: #373867;
+}
+
+.hero-section button {
+    width: 166px;
+    height: 72px;
+    background: #FFFFFF;
+    border: 3px solid #AACE9B;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #AACE9B;
+}
+
+.hero-section img {
+    margin: 50px 0 0 0;
+    width: 300px;
+    height: 300px;
+}
+
+@media screen and (min-width: 480px) {
+    .hero-section h1 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .hero-section .hero-text {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hero-section h1 {
+        flex: 4;
+    }
+
+    .hero-section h5 {
+        width: 400px;
+        margin: 80px 0 0 0;
+        padding: 15px 0 0 0;
+        font-weight: 700;
+        font-size: 1.688rem; /*27px*/
+        text-align: left;
+        text-transform: uppercase;
+        color: #AACE9B;
+    }
+
+    .hero-section p {
+        width: 450px;
+        padding: 0 15px;
+        margin: 50px 0;
+        font-size: 24px;
+        text-align: left;
+        color: #373867;
+    }
+
+    .hero-section button {
+        width: 166px;
+        height: 72px;
+        background: #FFFFFF;
+        border: 3px solid #AACE9B;
+        border-radius: 5px;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        color: #AACE9B;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .hero-section {
+        margin: 126px 0 0 397px;
+    }
+    
+    .hero-section h1 {
+        padding: 65px 0 0 28px;
+        text-align: left;
+        font-weight: 700;
+        font-size: 2rem;
+        letter-spacing: 0.3em;
+        color: #373867;
+    }
+    
+    .hero-section .hero-text div {
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start ;
+    }
+    
+    .hero-section h5 {
+        margin: 0 ;
+        padding: 0;
+        font-weight: 700;
+        font-size: 1.25rem; /* 20px */
+        text-align: left;
+        text-transform: uppercase;
+        color: #AACE9B;
+    }
+    
+    .hero-section p {
+        margin: 0 ;
+        padding: 0;
+        text-align: left;
+        font-size: 1rem;
+        color: #373867;
+    }
+    
+    .hero-section button {
+        width: 166px;
+        height: 72px;
+        background: #FFFFFF;
+        border: 3px solid #AACE9B;
+        border-radius: 5px;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        color: #AACE9B;
+    }
+    
+    .hero-section img {
+        width: 300px;
+        height: 300px;
+        margin: 0;
+    }
+
+}
