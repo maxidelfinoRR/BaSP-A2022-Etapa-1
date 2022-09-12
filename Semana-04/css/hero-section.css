@@ -1,4 +1,6 @@
 .hero-section {
+    display: flex;
+    flex-direction: column;
     margin: 115px 0 0 0;
 }
 
@@ -7,6 +9,7 @@
     font-weight: 700;
     font-size: 3rem;
     color: #373867;
+    order: 0;
 }
 
 .hero-section div {
@@ -21,6 +24,7 @@
     font-size: 1.25rem; /* 20px */
     text-align: center;
     color: #AACE9B;
+    order: 0;
 }
 
 .hero-section p {
@@ -29,6 +33,7 @@
     margin: 50px 0;
     font-size: 1rem;
     color: #373867;
+    order: 3;
 }
 
 .hero-section button {
@@ -48,6 +53,9 @@
     margin: 15px 0 0 0;
     width: 300px;
     height: 300px;
+    display: flex;
+    order: 0;
+
 }
 
 @media screen and (min-width: 480px) {
