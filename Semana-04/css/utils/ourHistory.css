@@ -1,30 +1,24 @@
 .ourHistory h4 {
-    width: 160px;
-    height: 38px;
-    margin: 80px 0 0 0;
+    width: 80px;
+    margin: 0 0 20px 40px;
     padding: 0 0 14px 0;
     font-weight: 700;
-    font-size: 32px;
-    color: #373867;
+    font-size: 1rem;
     border-bottom: 3px solid #AACE9B;
+    color: #373867;
 }
-
 .ourHistory article{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 45px 0 0 0;
+    width: 331px;
+    margin: 0 auto;
     font-weight: 400;
-    font-size: 3vh;
+    font-size: 0.875rem;
     color: #373867;
 }
-
-.ourHistory article p {
-    margin: 0 0 0 7px;
-}
-
 .ourHistory img {
-    width: 300px;
-    height: 300px;
-    padding: 40px 0 0 50px;
+    width: 285px;
+    height: 155px;
+    margin: 25px 0 0 0;
 } 

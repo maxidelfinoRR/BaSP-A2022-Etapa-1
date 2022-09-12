@@ -3,10 +3,10 @@
 }
 .hero-section h1 {
     margin: 5px 0 0 0;
-    color: #373867;
     text-align: center;
     font-weight: 700;
     font-size: 2.5rem;
+    color: #373867;
     order: 0;
 }
 .hero-section div {
@@ -23,13 +23,13 @@
     order: 0;
 }
 .hero-section div p {
-    text-align: center;
-    padding: 0 15px;
+    width: 283px;
     margin: 5px 0 0 0;
+    padding: 0 15px;
+    text-align: center;
     font-size: 0.875rem;
     color: #373867;
     order: 3;
-    text-align: center;
 }
 .hero-section button {
     display: none;
