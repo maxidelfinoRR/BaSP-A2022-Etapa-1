@@ -1,7 +1,6 @@
 .features {
     margin: 40px;
 }
-
 .features h4{
     display: inline-block;
     padding: 0 0 14px 0;
@@ -10,26 +9,22 @@
     border-bottom: 3px solid #AACE9B;
     color: #373867;
 }
-
 .features div {
     display: flex;
     justify-content: space-around;
     max-width: 600px;
     margin: 30px auto;
 }
-
 .features div article {
     display: flex;
     align-items: center;
 }
-
 .features div article p{
     width: 90px;
     font-weight: 700;
     font-size: 0.875rem;
     color: #373867;
 }
-
 .features article img{
     width: 40px;
     margin: 0 15px 0 0;

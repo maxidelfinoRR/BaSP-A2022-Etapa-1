@@ -1,37 +1,31 @@
 .whyUse {
-    display: flex;
-    flex-direction: column;
     margin: 80px 0;
 }
-
-
 .whyUse h4 {
-    padding: 0 0 14px 0;
+    width: 150px;    
     margin: 40px;
-    width: 300px;
+    padding: 0 0 14px 0;
     font-weight: 700;
-    font-size: 2rem;
-    color: #373867;
+    font-size: 1rem;
     border-bottom: 3px solid #AACE9B;
+    color: #373867;
 }
-
 .whyUse div {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    max-width: 600px;
+    margin: 0 auto;
 }
-
 .whyUse div img {
-    width: 40vw;
-    height: 30vh;
+    width: 130px;
+    height: 95px;
 }
-
 .whyUse div article ul {
     list-style-image: url('/assets/svg/Vector.svg');
 }
-
 .whyUse div article ul li {
-    padding: 2.5vh 0 2.5vh 0;
+    padding: 10px 0;
     font-weight: 700;
     font-size: 2.5vh;
     color: #373867;

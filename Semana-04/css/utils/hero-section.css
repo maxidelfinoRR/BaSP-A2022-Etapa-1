@@ -9,13 +9,11 @@
     font-size: 2.5rem;
     order: 0;
 }
-
 .hero-section div {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .hero-section div h5 {
     margin: 5px 0 0 0;
     text-align: center;
@@ -24,7 +22,6 @@
     color: #AACE9B;
     order: 0;
 }
-
 .hero-section div p {
     text-align: center;
     padding: 0 15px;
@@ -34,7 +31,6 @@
     order: 3;
     text-align: center;
 }
-
 .hero-section button {
     display: none;
     /* width: 166px;
@@ -47,7 +43,6 @@
     text-align: center;
     color: #AACE9B; */
 }
-
 .hero-section div img {
     width: 155px;
     height: 144px;
