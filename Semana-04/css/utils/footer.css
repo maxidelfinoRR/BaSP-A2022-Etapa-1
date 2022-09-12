@@ -1,0 +1,25 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+footer a img {
+    height: 14px;
+    margin: 17px 0 0 0;
+}
+footer div:nth-child(2) {
+    margin: 7px 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.875rem;
+    color: #373867;
+}
+
+footer div .copyright {
+    width: 609px;
+    height: 85px;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #373867;
+}
