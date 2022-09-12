@@ -3,41 +3,34 @@
 }
 
 .features h4{
-    width: 127px;
+    display: inline-block;
     padding: 0 0 14px 0;
     font-weight: 700;
-    font-size: 2rem;
-    line-height: 38px;
-    color: #373867;
+    font-size: 1rem;
     border-bottom: 3px solid #AACE9B;
+    color: #373867;
 }
 
 .features div {
     display: flex;
     justify-content: space-around;
+    max-width: 600px;
+    margin: 30px auto;
 }
 
 .features div article {
     display: flex;
     align-items: center;
-    margin: 20px 0 0 0;
 }
 
 .features div article p{
     width: 90px;
-    margin: 0 30px 0 0;
     font-weight: 700;
-    font-size: 2vh;
+    font-size: 0.875rem;
     color: #373867;
 }
 
 .features article img{
-    width: 10vh;
+    width: 40px;
     margin: 0 15px 0 0;
 }
-
-@media screen and (min-width:1200px) {
-    .features {
-        margin: 40px 0 0 425px;
-    }
-    }
