@@ -1,0 +1,38 @@
+.whyUse {
+    display: flex;
+    flex-direction: column;
+    margin: 80px 0;
+}
+
+
+.whyUse h4 {
+    padding: 0 0 14px 0;
+    margin: 40px;
+    width: 300px;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #373867;
+    border-bottom: 3px solid #AACE9B;
+}
+
+.whyUse div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.whyUse div img {
+    width: 40vw;
+    height: 30vh;
+}
+
+.whyUse div article ul {
+    list-style-image: url('/assets/svg/Vector.svg');
+}
+
+.whyUse div article ul li {
+    padding: 2.5vh 0 2.5vh 0;
+    font-weight: 700;
+    font-size: 2.5vh;
+    color: #373867;
+}
