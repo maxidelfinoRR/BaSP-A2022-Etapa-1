@@ -1,0 +1,27 @@
+.footerSecondary {
+    display: flex;
+    justify-content: space-around;
+    margin: 40px 0 auto;
+    padding: 0 0 24px 0;
+    border-bottom: 3px solid #AACE9B;
+}
+.footerSecondary article:nth-child(2) {
+    padding: 0 33px;
+    border-left: 2px solid #909090;
+    border-right: 2px solid #909090;
+}
+.footerSecondary h5 {
+    margin: 0 0 15px 0;
+    font-weight: 700;
+    font-size: 1rem;
+    color: #373867;
+}
+.footerSecondary article ul li {
+    padding: 4px 0;
+    list-style: none;
+}
+.footerSecondary article ul li a {
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #373867;    
+}
