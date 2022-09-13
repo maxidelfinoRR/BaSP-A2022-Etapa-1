@@ -29,6 +29,7 @@ header div {
     height: 8px;
     left: 13px;
     top: 4px;
+    transition: all .5s ease;
 }
 header input {
     width: 150px;
@@ -54,6 +55,7 @@ header input {
         height: 20px;
         left: 30px;
         top: 9px;
+        transition: all .5s ease;
     }
     header input {
         width: 377px;
@@ -61,7 +63,7 @@ header input {
         transition: all .5s ease;
     }
 }
-@media screen and (min-width: 1512) {
+@media screen and (min-width: 1512px) {
     header img {
         display: none;
     }

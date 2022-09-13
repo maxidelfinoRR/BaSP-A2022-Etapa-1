@@ -8,6 +8,7 @@
     font-size: 2.5rem;
     color: #373867;
     order: 0;
+    transition: all .5s ease;
 }
 .hero-section div {
     display: flex;
@@ -21,6 +22,7 @@
     font-size: 1rem;
     color: #AACE9B;
     order: 0;
+    transition: all .5s ease;
 }
 .hero-section div p {
     width: 283px;
@@ -30,6 +32,7 @@
     font-size: 0.875rem;
     color: #373867;
     order: 3;
+    transition: all .5s ease;
 }
 .hero-section button {
     display: none;
@@ -47,4 +50,45 @@
     width: 155px;
     height: 144px;
     margin: 5px 0 0 0;
+    transition: all .5s ease;
+}
+@media screen and (min-width: 834px) {
+    .hero-section {
+        margin: 92px 0 0 0;
+    }
+    .hero-section h1 {
+        padding: 62px 0 0 0;
+        font-size: 4.25rem;
+        transition: all .5s ease;
+    }
+    .hero-section div h5 {
+        margin: 18px 0 0 0;
+        font-size: 1.5rem;
+        transition: all .5s ease;
+    }
+    .hero-section div p {
+        width: 562px;
+        height: 120px;
+        margin: 15px 0 0 0;
+        font-size: 2rem;
+        transition: all .5s ease;
+    }
+    .hero-section button {
+        display: none;
+        /* width: 166px;
+        height: 72px;
+        background: #FFFFFF;
+        border: 3px solid #AACE9B;
+        border-radius: 5px;
+        font-size: 15px;
+        line-height: 18px;
+        text-align: center;
+        color: #AACE9B; */
+    }
+    .hero-section div img {
+        width: 196px;
+        height: 226px;
+        margin: 14px 0 0 0;
+        transition: all .5s ease;
+    }
 }
