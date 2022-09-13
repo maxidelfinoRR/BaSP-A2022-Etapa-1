@@ -8,6 +8,7 @@
     font-size: 1rem;
     border-bottom: 3px solid #AACE9B;
     color: #373867;
+    transition: all .5s ease;
 }
 .features div {
     display: flex;
@@ -24,8 +25,30 @@
     font-weight: 700;
     font-size: 0.875rem;
     color: #373867;
+    transition: all .5s ease;
 }
 .features article img{
     width: 40px;
     margin: 0 15px 0 0;
+    transition: all .5s ease;
+}
+@media screen and (min-width: 834px) {
+    .features h4{
+        font-size: 2rem;
+        border-bottom: 5px solid #AACE9B;
+        transition: all .5s ease;
+    }
+    .features div {
+        max-width: 700px;
+    }
+    .features div article p{
+        width: 150px;
+        font-size: 1.5rem;
+        transition: all .5s ease;
+    }
+    .features article img{
+        width: 92px;
+        margin: 0 50px 0 0;
+        transition: all .5s ease;
+    }
 }
