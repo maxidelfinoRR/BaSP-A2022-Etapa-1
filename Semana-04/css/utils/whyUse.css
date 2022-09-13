@@ -9,6 +9,7 @@
     font-size: 1rem;
     border-bottom: 3px solid #AACE9B;
     color: #373867;
+    transition: all .5s ease;
 }
 .whyUse div {
     display: flex;
@@ -20,6 +21,7 @@
 .whyUse div img {
     width: 130px;
     height: 95px;
+    transition: all .5s ease;
 }
 .whyUse div article ul {
     list-style-image: url('/assets/svg/Vector.svg');
@@ -27,6 +29,29 @@
 .whyUse div article ul li {
     padding: 10px 0;
     font-weight: 700;
-    font-size: 2.5vh;
+    font-size: 0.875rem;
     color: #373867;
+    transition: all .5s ease;
+}
+@media screen and (min-width: 834px) {
+    .whyUse h4 {
+        width: 300px;    
+        font-size: 2rem;
+        border-bottom: 5px solid #AACE9B;
+        transition: all .5s ease;
+    }
+    .whyUse div {
+        max-width: 900px;
+    }
+    .whyUse div img {
+        width: 300px;
+        height: 210px;
+        transition: all .5s ease;
+    }
+    .whyUse div article ul li {
+        padding: 10px 0;
+        font-weight: 700;
+        font-size: 1.5rem;
+        transition: all .5s ease;
+    }
 }
