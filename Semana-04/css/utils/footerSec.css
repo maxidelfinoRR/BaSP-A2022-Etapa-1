@@ -15,6 +15,7 @@
     font-weight: 700;
     font-size: 1rem;
     color: #373867;
+    transition: all .5s ease;
 }
 .footerSecondary article ul li {
     padding: 4px 0;
@@ -23,7 +24,8 @@
 .footerSecondary article ul li a {
     font-weight: 400;
     font-size: 0.875rem;
-    color: #373867;    
+    color: #373867;
+    transition: all .5s ease;
 }
 @media screen and (min-width: 834px) {
     .footerSecondary {

@@ -6,6 +6,7 @@ footer {
 footer a img {
     height: 14px;
     margin: 17px 0 0 0;
+    transition: all .5s ease;
 }
 footer div:nth-child(2) {
     margin: 7px 0;
@@ -14,12 +15,16 @@ footer div:nth-child(2) {
     font-size: 0.875rem;
     color: #373867;
 }
-
-footer div .copyright {
-    width: 609px;
-    height: 85px;
-    font-weight: 400;
-    font-size: 24px;
-    text-align: center;
-    color: #373867;
+@media screen and (min-width: 834px){
+    footer a img {
+        height: 30px;
+        margin: 56px 0 40px 0;
 }
+    footer div:nth-child(2) {
+        margin: 0 0 40px 0;
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        color: #373867;
+    }
+} 

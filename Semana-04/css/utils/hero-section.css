@@ -86,8 +86,8 @@
         color: #AACE9B; */
     }
     .hero-section div img {
-        width: 196px;
-        height: 226px;
+        width: 300px;
+        height: 300px;
         margin: 14px 0 0 0;
         transition: all .5s ease;
     }
