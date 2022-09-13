@@ -25,3 +25,20 @@
     font-size: 0.875rem;
     color: #373867;    
 }
+@media screen and (min-width: 834px) {
+    .footerSecondary {
+        margin: 110px 0 auto;
+        padding: 0 0 50px 0;
+        border-bottom: 5px solid #AACE9B;
+    }
+    .footerSecondary article:nth-child(2) {
+        padding: 0 50px;
+    }
+    .footerSecondary h5 {
+        margin: 0 0 60px 0;
+        font-size: 2rem;
+    }
+    .footerSecondary article ul li a {
+        font-size: 1.5rem;
+    }
+}
