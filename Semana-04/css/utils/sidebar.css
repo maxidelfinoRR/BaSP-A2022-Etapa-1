@@ -1,28 +1,26 @@
-@media screen and (max-width: 1512px) {
+@media screen and (max-width: 1511px) {
     aside {
         display: none;
     }
 }
 aside {
     position: fixed;
-    top: 126px;
     width: 397px;
     height: 100%;
     padding-top: 80px;
+    top: 126px;
+    background-color:#fff;
     border-right: 2px solid #BFBFBF;
     font-family: 'Roboto', sans-serif;
-    background-color:#fff;
 }
 aside h3 {
     width: 100px;
-    height: 33px;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 35px;
-    color: #373867;
     margin-left: 55px;
     padding-bottom: 33px;
-    border-bottom: 3px solid #AACE9B;
+    border-bottom: 5px solid #AACE9B;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #373867;
 }
 aside ul li {
     margin: 36px 0;
@@ -32,6 +30,13 @@ aside ul li {
 aside nav ul li:nth-child(1) {
     padding-top: 36px;
 }
+aside ul li a {
+    padding-left: 55px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 35px;
+    color: #373867;
+}
 nav div {
     display: flex;
     align-items: center;
@@ -40,18 +45,13 @@ nav div {
 aside div a{
     width: 264px;
     display: inline-block;
-    margin: 0 0 0 75px;
-    font-size: 25px;
-    line-height: 29px;
+    margin: 0 0 0 29px;
+    font-size: 1.5rem;
     color: #373867;
 }
 .email, .phone {
-    margin: 0 0 0 15px;
+    margin: 0 10px 0 55px;
 }    
-aside ul a {
-    padding-left: 55px;
-    font-weight: 400;
-    font-size: 30px;
-    line-height: 35px;
-    color: #373867;
+.home {
+    margin: 0 0 0 40px;
 }
