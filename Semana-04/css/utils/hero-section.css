@@ -1,3 +1,7 @@
+main{
+    margin: 0;
+    transition: all .5s ease;
+}
 .hero-section {
     margin: 30px 0 0 0;
 }
@@ -34,18 +38,6 @@
     order: 3;
     transition: all .5s ease;
 }
-.hero-section button {
-    display: none;
-    /* width: 166px;
-    height: 72px;
-    background: #FFFFFF;
-    border: 3px solid #AACE9B;
-    border-radius: 5px;
-    font-size: 15px;
-    line-height: 18px;
-    text-align: center;
-    color: #AACE9B; */
-}
 .hero-section div img {
     width: 155px;
     height: 144px;
@@ -73,22 +65,73 @@
         font-size: 2rem;
         transition: all .5s ease;
     }
-    .hero-section button {
-        display: none;
-        /* width: 166px;
-        height: 72px;
-        background: #FFFFFF;
-        border: 3px solid #AACE9B;
-        border-radius: 5px;
-        font-size: 15px;
-        line-height: 18px;
-        text-align: center;
-        color: #AACE9B; */
-    }
     .hero-section div img {
         width: 300px;
         height: 300px;
         margin: 14px 0 0 0;
+        transition: all .5s ease;
+    }
+}
+@media screen and (max-width:1511px) {
+    .hero-section button {
+        display: none;
+    }
+}
+.hero-section button {
+    order: 1;
+    width: 166px;
+    height: 72px;
+    margin: 40px 0;
+    background: #FFFFFF;
+    border: 3px solid #AACE9B;
+    border-radius: 5px;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
+    color: #AACE9B;
+}
+@media screen and (min-width: 1512px){
+    main, footer {
+        margin: 0 0 0 397px;
+        transition: all .5s ease;
+    }
+    .hero-section {
+        margin: 126px 0 0 0;
+    }
+    .hero-section h1 {
+        margin: 65px 0 0 40px;
+        text-align: left;
+        font-size: 3rem;
+        letter-spacing: 0.3em;
+        order: 0;
+        transition: all .5s ease;
+    }
+    .hero-section div {
+        align-items: flex-start;
+        flex-wrap: wrap;
+        height:500px;
+        margin: 0 0 0 40px;
+    }
+    .hero-section div h5 {
+        order: 0;
+        margin: 40px 0;
+        text-align: left;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        transition: all .5s ease;
+    }
+    .hero-section div p {
+        order: 0;
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        font-size: 1.5rem;
+        transition: all .5s ease;
+    }
+    .hero-section div img {
+        order:2;
+        width: 458px;
+        height: 449px;
         transition: all .5s ease;
     }
 }
