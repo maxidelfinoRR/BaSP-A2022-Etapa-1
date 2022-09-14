@@ -67,4 +67,26 @@ header input {
     header img {
         display: none;
     }
+    header {
+        height: 126px;
+        transition: all .5s ease;
+    }
+    header img {
+        width: 10px;
+        height: 10px;
+        margin: 0 0 0 10px;
+        transition: all .5s ease;
+    }
+    .search {
+        width: 20px;
+        height: 20px;
+        left: 30px;
+        top: 9px;
+        transition: all .5s ease;
+    }
+    header input {
+        width: 377px;
+        height: 36px;
+        transition: all .5s ease;
+    }
 }
