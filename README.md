@@ -5,22 +5,36 @@ _Time registration system for GigaTech Software Solutions SA employees_
 ---
 
 ## Built with 🛠️
-_During week 01 we work with the following tools:_
+_During **week 01** we work with the following tools:_
 
 ![](https://skills.thijs.gg/icons?i=figma)
 
-_During week 02 we work with the following tools:_
+---
+_During **week 02** we work with the following tools:_
 
 ![](https://skills.thijs.gg/icons?i=html)
 ![](https://skills.thijs.gg/icons?i=git)
 ![](https://skills.thijs.gg/icons?i=github)
 
-_During week 03 we work with the following tools:_
+---
+_During **week 03** we work with the following tools:_
 
 ![](https://skills.thijs.gg/icons?i=html)
 ![](https://skills.thijs.gg/icons?i=css)
 ![](https://skills.thijs.gg/icons?i=git)
 ![](https://skills.thijs.gg/icons?i=github)
+
+---
+_During **week 04** we work with the following tools:_
+
+![](https://skills.thijs.gg/icons?i=html)
+![](https://skills.thijs.gg/icons?i=css)
+![](https://skills.thijs.gg/icons?i=git)
+![](https://skills.thijs.gg/icons?i=github)
+
+_• Flexbox and responsive layout_
+
+_• Responsive Design_
 
 ---
 
