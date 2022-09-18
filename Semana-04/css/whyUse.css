@@ -1,12 +1,8 @@
-.whyUse {
-    margin: 80px 0;
-}
 .whyUse h4 {
-    width: 150px;    
+    display: inline-block;
     margin: 40px;
     padding: 0 0 14px 0;
     font-weight: 700;
-    font-size: 1rem;
     border-bottom: 3px solid #AACE9B;
     color: #373867;
     transition: all .5s ease;
@@ -16,11 +12,10 @@
     align-items: center;
     justify-content: space-around;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto 80px;
 }
 .whyUse div img {
     width: 130px;
-    height: 95px;
     transition: all .5s ease;
 }
 .whyUse div article ul {

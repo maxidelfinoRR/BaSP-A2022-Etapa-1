@@ -1,7 +1,6 @@
 .footerSecondary {
     display: flex;
     justify-content: space-around;
-    margin: 40px 0 auto;
     padding: 0 0 24px 0;
     border-bottom: 3px solid #AACE9B;
 }

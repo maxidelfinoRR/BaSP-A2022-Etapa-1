@@ -2,20 +2,19 @@ header {
     position: fixed;
     display: flex;
     align-items: center;
-    width: 100%;
     height: 30px;
     top: 0;
     background: #AACE9B;
     z-index: 100;
     transition: all .5s ease;
 }
-header img {
+.burgerBtn {
     width: 10px;
     height: 10px;
     margin: 0 0 0 10px;
     transition: all .5s ease;
 }
-header img:hover {
+.burgerBtn:hover {
     cursor: pointer;
 }
 header div {
@@ -44,7 +43,7 @@ header input {
         height: 92px;
         transition: all .5s ease;
     }
-    header img {
+    .burgerBtn {
         width: 30px;
         height: 30px;
         margin: 0 0 0 30px;
@@ -64,14 +63,14 @@ header input {
     }
 }
 @media screen and (min-width: 1512px) {
-    header img {
+    .burgerBtn {
         display: none;
     }
     header {
         height: 126px;
         transition: all .5s ease;
     }
-    header img {
+    .burgerBtn {
         width: 10px;
         height: 10px;
         margin: 0 0 0 10px;

@@ -1,9 +1,8 @@
 .ourHistory h4 {
-    width: 80px;
+    display: inline-block;
     margin: 0 0 20px 40px;
     padding: 0 0 14px 0;
     font-weight: 700;
-    font-size: 1rem;
     border-bottom: 3px solid #AACE9B;
     color: #373867;
     transition: all .5s ease;
@@ -12,17 +11,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 331px;
+    width: 310px;
     margin: 0 auto;
-    font-weight: 400;
     font-size: 0.875rem;
     color: #373867;
     transition: all .5s ease;
 }
 .ourHistory img {
-    width: 285px;
     height: 155px;
-    margin: 25px 0 0 0;
+    margin: 25px 0 40px 0;
     transition: all .5s ease;
 }
 @media screen and (min-width: 834px) {

@@ -1,11 +1,10 @@
 .features {
-    margin: 40px;
+    margin: 40px 40px 80px 40px;
 }
 .features h4{
     display: inline-block;
     padding: 0 0 14px 0;
     font-weight: 700;
-    font-size: 1rem;
     border-bottom: 3px solid #AACE9B;
     color: #373867;
     transition: all .5s ease;
