@@ -14,10 +14,10 @@ function isNum(n){
     return typeof n === 'number'; 
 }
 function suma2 (a,b) {
-    if (isNum(a) && isNum(b)) {
-        return a + b;
+    if (!isNum(a) || !isNum(b)) {
+        return 'One of the elements has a bug; Not a Number (NaN)';
     }
-    return 'Not a Number (NaN)';
+    return a + b;
 }
 console.log(suma2(3,'5'));
 
