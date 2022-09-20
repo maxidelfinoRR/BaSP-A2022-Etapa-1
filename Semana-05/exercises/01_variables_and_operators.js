@@ -2,10 +2,10 @@ console.log('--EXERCISE 1: VARIABLES & OPERATORS');
 
 // a) Create two numeric variables and use the addition operator to store the value of the sum of both numbers in a 3rd variable.
 console.log('-Exercise 1.a:');
-var a=1;
-var b=2;
-var c = a + b;
-console.log('The sum between ' + a + ' and ' + b + ' is: ' + c);
+var element1=1;
+var element2=2;
+var c = element1 + element2;
+console.log('The sum between ' + element1 + ' and ' + element2 + ' is: ' + c);
 
 //b) Create two variables of type String and concatenate them, saving the result in a 3rd variable.
 console.log('-Exercise 1.b:');
