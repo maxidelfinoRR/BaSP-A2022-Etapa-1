@@ -1,0 +1,91 @@
+header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    top: 0;
+    background: #AACE9B;
+    z-index: 100;
+    transition: all .5s ease;
+}
+.burgerBtn {
+    width: 10px;
+    height: 10px;
+    margin: 0 0 0 10px;
+    transition: all .5s ease;
+}
+.burgerBtn:hover {
+    cursor: pointer;
+}
+header div {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+.search {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    left: 13px;
+    top: 4px;
+    transition: all .5s ease;
+}
+header input {
+    width: 150px;
+    height: 15px;
+    background: #D8E7EB;
+    border-radius: 50px;
+    border: 1px solid #D6D6D6;
+    transition: all .5s ease;
+}
+@media screen and (min-width: 834px) {
+    header {
+        height: 92px;
+        transition: all .5s ease;
+    }
+    .burgerBtn {
+        width: 30px;
+        height: 30px;
+        margin: 0 0 0 30px;
+        transition: all .5s ease;
+    }
+    .search {
+        width: 20px;
+        height: 20px;
+        left: 30px;
+        top: 9px;
+        transition: all .5s ease;
+    }
+    header input {
+        width: 377px;
+        height: 36px;
+        transition: all .5s ease;
+    }
+}
+@media screen and (min-width: 1512px) {
+    .burgerBtn {
+        display: none;
+    }
+    header {
+        height: 126px;
+        transition: all .5s ease;
+    }
+    .burgerBtn {
+        width: 10px;
+        height: 10px;
+        margin: 0 0 0 10px;
+        transition: all .5s ease;
+    }
+    .search {
+        width: 20px;
+        height: 20px;
+        left: 30px;
+        top: 9px;
+        transition: all .5s ease;
+    }
+    header input {
+        width: 377px;
+        height: 36px;
+        transition: all .5s ease;
+    }
+}

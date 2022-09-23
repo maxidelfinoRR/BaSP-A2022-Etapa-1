@@ -1,0 +1,108 @@
+.active {
+    display: none;
+}
+aside {
+    display: block;
+    position: fixed;
+    width: 397px;
+    height: 100%;
+    background-color:#fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.875rem;
+    /* text-align: center; */
+}
+aside h3 {
+    display: inline-block;
+    margin-left: 40%;
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-align: center;
+    color: #373867;
+}
+aside ul li {
+    margin: 15px 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #AACE9B;
+}
+aside nav ul li:nth-child(1) {
+    padding-top: 15px;
+}
+aside ul li a {
+    padding-left: 20px;
+    font-size: 0.875rem;
+    color: #373867;
+}
+nav div {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+aside div a{
+    width: 264px;
+    display: inline-block;
+    margin: 0 0 0 29px;
+    font-size: 0.875rem;
+    color: #373867;
+}
+.email, .phone {
+    margin: 0 10px 0 55px;
+}    
+.home {
+    margin: 0 0 0 40px;
+}
+@media screen and (min-width: 1512px) {    
+    aside {
+        display: block;
+        position: fixed;
+        width: 397px;
+        height: 100%;
+        padding-top: 80px;
+        background-color:#fff;
+        border-right: 2px solid #BFBFBF;
+        font-family: 'Roboto', sans-serif;
+        top: 126px;
+    }
+    aside h3 {
+        width: 100px;
+        margin-left: 55px;
+        padding-bottom: 33px;
+        border-bottom: 5px solid #AACE9B;
+        font-weight: 700;
+        font-size: 2rem;
+        color: #373867;
+    }
+    aside ul li {
+        margin: 36px 0;
+        padding-bottom: 36px;
+        border-bottom: 2px solid #BFBFBF;
+    }
+    aside nav ul li:nth-child(1) {
+        padding-top: 36px;
+    }
+    aside ul li a {
+        padding-left: 55px;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 35px;
+        color: #373867;
+    }
+    nav div {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+    }
+    aside div a{
+        width: 264px;
+        display: inline-block;
+        margin: 0 0 0 29px;
+        font-size: 1.5rem;
+        color: #373867;
+    }
+    .email, .phone {
+        margin: 0 10px 0 55px;
+    }    
+    .home {
+        margin: 0 0 0 40px;
+    }
+}

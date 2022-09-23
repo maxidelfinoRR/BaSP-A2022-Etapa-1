@@ -63,6 +63,31 @@ https://maxidelfinorr.github.io/BaSP-A2022-Etapa-1/Semana-04/index.html
 ```
 https://maxidelfinorr.github.io/BaSP-A2022-Etapa-1/Semana-05/index.html
 ```
+---
+_During **week 06** we work with the following tools:_
+
+![](https://skills.thijs.gg/icons?i=html)
+![](https://skills.thijs.gg/icons?i=css)
+![](https://skills.thijs.gg/icons?i=js)
+![](https://skills.thijs.gg/icons?i=git)
+![](https://skills.thijs.gg/icons?i=github)
+
+_• Use of ECMAScript 5_
+
+_• Dom Management_
+
+_• Form validation_
+
+_• Use of ECMAScript 5_
+
+### Display of work done in week 06
+```
+https://maxidelfinorr.github.io/BaSP-A2022-Etapa-1/Semana-06/index.html
+```
+#### Visualization of the requirements document for validations:
+```
+https://docs.google.com/document/d/10u09v6OmNlrvumM22czlYcl-M9SH7Apo28NtKFG7WQ0/edit?usp=sharing
+```
 
 ---
 
@@ -86,5 +111,6 @@ _Press "Code" and click on "Download ZIP". Unzip and ready!_
 
 * **Maximiliano Delfino**
 * **Beast and Joaco team**
+* **Alfonso and Agus team**
 
 ---
