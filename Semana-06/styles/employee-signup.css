@@ -1,0 +1,107 @@
+.signUpHeader {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.signUpHeader h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    font-family: 'Roboto', sans-serif;
+    color: #373867;
+    transition: all .5s ease;
+}
+.signUpMain {
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+    width: 800px;
+    margin: 200px auto 0;
+    padding: 40px 20px;
+}
+
+.signUpMain .signUp-title {
+    display: flex;
+    margin: 0 0 40px 0;
+}
+.signUpMain .signUp-title div {
+    width: 100%;
+    margin: 0 30px 0 0;
+}
+.signUpMain .signUp-title div h2 {
+    margin: 0 40%;
+    color: #373867;
+    font-weight: bold;
+}
+.signUpMain form div{
+    display: flex;
+    align-items: center;
+    width: 800px;
+    margin: 0 0 20px 0;
+}
+.signUpMain form div div{
+    display: flex;
+    flex-direction: column;
+}
+.signUpMain form div div p {
+    color: #373867;
+    font-weight: bold;
+}
+.signUpMain form div div input {
+    margin:10px 0 0 0;
+}
+.signUpFooter {
+    margin: 0;
+}
+
+@media screen and (min-width: 834px){
+    .signUpMain h1 {
+        font-size: 4.25rem;
+        transition: all .5s ease;
+    }
+    .signUpMain h2{
+        font-size: 2rem;
+        transition: all .5s ease;
+    }
+
+    .signUpMain form input::placeholder {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 1512px){
+    .signUpMain h1 {
+        font-size: 3rem;
+        letter-spacing: 0.3em;
+        transition: all .5s ease;
+    }
+    .signUpMain input {
+        height: 33px;
+        width: 300px;
+        border-radius: 4px;
+        color: #C4C4C4;
+        transition: all .5s ease;
+    }
+    .signUpMain span {
+        margin: 0 0 10px 0;
+    }
+    .inputErr {
+        border: 2px solid red;
+    }
+    .spanNot {
+        color: red;
+    }
+    .spanOk {
+        color: green;
+    }
+    .inputApc {
+        border: 2px solid green;
+    }
+    .signUpMain .signUpBtn {
+        width: 308px;
+        margin: 20px 0 0 0;
+        background: #AACE9B;
+        color: #FFFFFF;
+        transition: all .5s ease;
+    }
+    .signUpMain .signUpBtn:focus {
+        color: #FFFFFF;
+    }
+}

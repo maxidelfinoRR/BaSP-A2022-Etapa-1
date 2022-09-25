@@ -6,8 +6,8 @@ window.onload = function () {
     var emailOk = document.getElementById('emailOk');
     var passwordOk = document.getElementById('passwordOk');
     var passwordRegex = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',0,1,2,3,4,5,6,7,8,9];
-    var arrStr = [];
-    var arrPassword = passwordRegex.join('')
+    var accessEmail = false;
+    var accessPass = false;
 
     function passwordChars(password) {
         if (password.value.length >= 8) {
@@ -15,23 +15,21 @@ window.onload = function () {
         }
         return false;
     }
-    
     function passwordFn (passwordRegex, str) {
         var enter= true 
         for (var i=0; i<str.length;  i++) {
-            arrStr[i] = str[i];
             for (var j=0; j<passwordRegex.length; j++){
-                if (!arrPassword.includes(arrStr[i])) {
-                    enter = false
+                if (!passwordRegex.join('').includes(arrStr[i])) {
+                    enter = false;
                 }
             }
         }
         return enter;
     }
     email.onfocus = function() { // no puedo quitar el border red
-        password.classList.remove('inputErr');
-        password.classList.remove('inputApc');
-        passwordOk.innerHTML = '';
+        email.classList.remove('inputErr');
+        email.classList.remove('inputApc');
+        emailOk.innerHTML = '';
     }
     email.onblur = function () {
         if (!email.value.match(emailRegex)) {
@@ -39,13 +37,15 @@ window.onload = function () {
             email.classList.remove('inputApc');
             emailOk.innerHTML = 'Please enter a valid email';
             emailOk.classList.add('spanNot');
-            emailOk.classList.remove('spanOk');            
+            emailOk.classList.remove('spanOk');
+            accessEmail = false;         
         } else {
             email.classList.remove('inputErr');
             email.classList.add('inputApc');
             emailOk.innerHTML = 'Valid email';
             emailOk.classList.add('spanOk');
             emailOk.classList.remove('spanNot');
+            accessEmail = true;
         }
     }
     password.onfocus = function() {
@@ -60,16 +60,22 @@ window.onload = function () {
             passwordOk.innerHTML = 'Valid password';
             passwordOk.classList.add('spanOk');
             passwordOk.classList.remove('spanNot');
+            accessPass = true;
         } else {
             password.classList.add('inputErr');
             password.classList.remove('inputApc');
             passwordOk.innerHTML = 'Please enter a valid password';
             passwordOk.classList.add('spanNot');
             passwordOk.classList.remove('spanOk');
+            accessPass = false;
         }
     }
     loginBtn.onclick = function(e) {
         e.preventDefault();   
-        console.log(email.value,password.value,passwordRegex.length);
+        if (accessEmail && accessPass) {
+            alert(email.value,password.value);
+        } else {
+            alert('Complete form');
+        }
     }
 }
