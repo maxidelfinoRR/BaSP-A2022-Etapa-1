@@ -19,7 +19,7 @@ window.onload = function () {
         var enter= true 
         for (var i=0; i<str.length;  i++) {
             for (var j=0; j<passwordRegex.length; j++){
-                if (!passwordRegex.join('').includes(arrStr[i])) {
+                if (!passwordRegex.join('').includes(str[i])) {
                     enter = false;
                 }
             }
@@ -71,9 +71,16 @@ window.onload = function () {
         }
     }
     loginBtn.onclick = function(e) {
-        e.preventDefault();   
+        e.preventDefault();
         if (accessEmail && accessPass) {
-            alert(email.value,password.value);
+            loginBtn.value = 'Sent';
+            alert('Email: ' + email.value, 'Password' + password.value);
+        } else if (!accessEmail && !accessPass){
+            alert('Complete email and password');
+        } else if (!accessEmail) {
+            alert('Complete email');
+        } else if (!accessPass) {
+            alert('Complete Password');
         } else {
             alert('Complete form');
         }
