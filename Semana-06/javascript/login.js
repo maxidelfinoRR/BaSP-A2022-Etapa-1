@@ -26,47 +26,46 @@ window.onload = function () {
         }
         return enter;
     }
+    function addClass(tagName, tagNameOk) {
+        tagName.classList.remove('inputErr');
+        tagName.classList.add('inputApc');
+        tagNameOk.innerHTML = 'Valid ' + tagName.name;
+        tagNameOk.classList.add('spanOk');
+        tagNameOk.classList.remove('spanNot');
+    }
+    function removeClass(tagName,tagNameOk) {
+        tagName.classList.add('inputErr');
+        tagName.classList.remove('inputApc');
+        tagNameOk.innerHTML = 'Please enter a valid ' + tagName.name;
+        tagNameOk.classList.add('spanNot');
+        tagNameOk.classList.remove('spanOk');
+    }
+    function focusing(tagName, tagNameOk) {
+        tagName.classList.remove('inputErr');
+        tagName.classList.remove('inputApc');
+        tagNameOk.innerHTML = '';
+    }
     email.onfocus = function() { // no puedo quitar el border red
-        email.classList.remove('inputErr');
-        email.classList.remove('inputApc');
-        emailOk.innerHTML = '';
+       focusing(email,emailOk);
     }
     email.onblur = function () {
         if (!email.value.match(emailRegex)) {
-            email.classList.add('inputErr');
-            email.classList.remove('inputApc');
-            emailOk.innerHTML = 'Please enter a valid email';
-            emailOk.classList.add('spanNot');
-            emailOk.classList.remove('spanOk');
+            removeClass(email,emailOk);
             accessEmail = false;         
         } else {
-            email.classList.remove('inputErr');
-            email.classList.add('inputApc');
-            emailOk.innerHTML = 'Valid email';
-            emailOk.classList.add('spanOk');
-            emailOk.classList.remove('spanNot');
+            addClass(email,emailOk);
             accessEmail = true;
         }
     }
     password.onfocus = function() {
-        password.classList.remove('inputErr');
-        password.classList.remove('inputApc');
-        passwordOk.innerHTML = '';
+        focusing(password,passwordOk);
     }
     password.onblur = function () {
         if (passwordFn(passwordRegex,password.value) && passwordChars(password)) {
-            password.classList.remove('inputErr');
-            password.classList.add('inputApc');
-            passwordOk.innerHTML = 'Valid password';
-            passwordOk.classList.add('spanOk');
-            passwordOk.classList.remove('spanNot');
+            addClass(password,passwordOk);
             accessPass = true;
         } else {
-            password.classList.add('inputErr');
-            password.classList.remove('inputApc');
-            passwordOk.innerHTML = 'Please enter a valid password';
-            passwordOk.classList.add('spanNot');
-            passwordOk.classList.remove('spanOk');
+            removeClass(password,passwordOk);
             accessPass = false;
         }
     }
