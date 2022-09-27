@@ -92,11 +92,9 @@ window.onload = function () {
             if(contentLetters(regex, tagName.value) && wordMinChars(tagName, n) ) {
                 addClass(tagName, tagNameOk);
                 passed[pos] = true;
-                console.log(passed);
             } else {
                 removeClass(tagName, tagNameOk);
                 passed[pos] = false;
-                console.log(passed);
             }
         }
     }
@@ -123,11 +121,9 @@ window.onload = function () {
         if (contentLetters(regex, tagName.value) && wordMinChars(tagName, n) && letterSpace(tagName.value)) {
             addClass(tagName, tagNameOk);
             passed[pos] = true;
-            console.log(passed);
         } else {
             removeClass(tagName, tagNameOk);
             passed[pos] = false;
-            console.log(passed);
         }
     }
     //NAME

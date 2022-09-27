@@ -12,6 +12,10 @@ form {
     border-bottom: 3px solid #AACE9B;
     transition: all .5s ease;
 }
+.form form div {
+    display: flex;
+    flex-direction: column;
+}
 form div input, form div select {
     height: 33px;
     width: 300px;
@@ -36,7 +40,7 @@ form div select option {
     font-size: 0.875rem;
     color: #C4C4C4;
 } 
-form div select:focus, form div input:focus {
+form div select:focus, form div input:focus{
     border-color: #AACE9B;
     color: #C4C4C4; 
     outline: none;
@@ -47,8 +51,10 @@ form textarea {
     margin-top: 15px;
     border: 2px solid #AACE9B;
     border-radius: 4px;
+    color: #C4C4C4;
     resize:none;
     transition: all .5s ease;
+    outline: none;
 }
 form textarea::placeholder {
     padding-left: 12px;
@@ -57,8 +63,9 @@ form textarea::placeholder {
     color: #C4C4C4;
     transition: all .5s ease;
 }
-.formBtn {
+.form form .formBtn {
     display: flex;
+    flex-direction: row;
     justify-content: flex-end;
     width: 300px;
     margin: 20px 0 30px 0;
@@ -83,12 +90,35 @@ form textarea::placeholder {
     color: #FFFFFF;
     transition: all .5s ease;
 }
+.inputErr {
+    border: 2px solid red;
+    border-radius: 4px;
+}
+.inputApc {
+    border: 2px solid green;
+    border-radius: 4px;
+}
+.form form span {
+    font-size: 0.6rem;
+}
+.form form span {
+    margin: 5px 0 0 0;
+}
+.spanNot {
+    color: red;
+}
+.spanOk {
+    color: green;
+}
 @media screen and (min-width: 834px) {
     .form h5 {
         width: 370px;
         font-size: 2rem;
         border-bottom: 5px solid #AACE9B;
         transition: all .5s ease;
+    }
+    .form form span {
+        font-size: 1rem;
     }
     form div input, form div select {
         height: 50px;
@@ -104,6 +134,7 @@ form textarea::placeholder {
         height: 200px;
         width: 750px;
         margin-top: 40px;
+        font: 1.25rem;
         transition: all .5s ease;
     }
     form textarea::placeholder {
@@ -117,5 +148,10 @@ form textarea::placeholder {
         width: 150px;
         height: 50px;
         transition: all .5s ease;
+    }
+}
+@media screen and (min-width: 834px) {
+    .form textarea {
+        font-size: 1.5rem;
     }
 }

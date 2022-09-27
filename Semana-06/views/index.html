@@ -22,7 +22,7 @@
         <link rel="stylesheet" href="../styles/ourHistory.css">
         <link rel="stylesheet" href="../styles/footerSec.css">
         <link rel="stylesheet" href="../styles/footer.css">
-        <script src="../javascript/app.js"></script>
+        <script src="../javascript/contact.js"></script>
     </head>
     <body>
         <header>
@@ -107,23 +107,27 @@
                 <h5>Ask for more information:</h5>
                 <form action="get">
                     <div>
-                        <input type="text" placeholder="Name">
+                        <input id="name" type="text" placeholder="Name" name="name">
+                        <span id="nameOk"></span>
                     </div>
                     <div>
-                        <input type="text" placeholder="Email">
+                        <input id="email" type="text" placeholder="Email" name="email">
+                        <span id="emailOk"></span>
                     </div>
                     <div>
-                        <select>
-                            <option>-Category-</option>
-                            <option>Human resource</option>
-                            <option>Systems</option>
-                            <option>Commercialization</option>
+                        <select id="select" name="category">
+                            <option id="category">-Category-</option>
+                            <option id="humanResource">Human resource</option>
+                            <option id="systems">Systems</option>
+                            <option id="commerce">Commercialization</option>
                         </select>
+                        <span id="selectOk"></span>
                     </div>
-                    <textarea placeholder="Message"></textarea>
+                    <textarea id="textArea" placeholder="Message" name="message"></textarea>
+                    <span id="textAreaOk"></span>
                     <div class="formBtn">
                         <button>Cancel</button>
-                        <input type="submit" value="Send">
+                        <input type="submit" value="Send" id="contactBtn">
                     </div>
                 </form>
             </section>

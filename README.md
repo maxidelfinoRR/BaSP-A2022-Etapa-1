@@ -96,7 +96,7 @@ https://docs.google.com/document/d/10u09v6OmNlrvumM22czlYcl-M9SH7Apo28NtKFG7WQ0/
 _We need to run the following command in our terminal:_
 
 ```
-$ git clone https://github.com/maxidelfinoRR/BaSP-A2022-Etapa-1
+git clone https://github.com/maxidelfinoRR/BaSP-A2022-Etapa-1
 ```
 
 ---
