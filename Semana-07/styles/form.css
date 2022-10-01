@@ -1,0 +1,157 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form h5 {
+    display: inline-block;
+    padding: 0 0 14px 0;
+    margin: 0 0 0 40px ;
+    font-weight: 700;
+    color: #373867;
+    border-bottom: 3px solid #AACE9B;
+    transition: all .5s ease;
+}
+.form form div {
+    display: flex;
+    flex-direction: column;
+}
+form div input, form div select {
+    height: 33px;
+    width: 300px;
+    margin-top: 15px;
+    border: 2px solid #AACE9B;
+    border-radius: 4px;
+    color: #C4C4C4;
+    transition: all .5s ease;
+}
+form div input::placeholder {
+    padding: 0 0 0 12px;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #C4C4C4;
+    transition: all .5s ease;
+}
+form div select option {
+    height: 33px;
+    width: 300px;
+    padding: 12px 0 0 12px;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #C4C4C4;
+} 
+form div select:focus, form div input:focus{
+    border-color: #AACE9B;
+    color: #C4C4C4; 
+    outline: none;
+}
+form textarea {
+    height: 100px;
+    width: 300px;
+    margin-top: 15px;
+    border: 2px solid #AACE9B;
+    border-radius: 4px;
+    color: #C4C4C4;
+    resize:none;
+    transition: all .5s ease;
+    outline: none;
+}
+form textarea::placeholder {
+    padding-left: 12px;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: #C4C4C4;
+    transition: all .5s ease;
+}
+.form form .formBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 300px;
+    margin: 20px 0 30px 0;
+}
+.formBtn button, .formBtn input {
+    width: 85px;
+    height: 34px;
+    margin: 0 0 0 20px;
+    border-radius: 5px;
+    border: 3px solid #AACE9B;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all .5s ease;
+}
+.formBtn button {
+    background: #FFFFFF;
+    color: #AACE9B;
+    transition: all .5s ease;
+}
+.formBtn input {
+    background: #AACE9B;
+    color: #FFFFFF;
+    transition: all .5s ease;
+}
+.inputErr {
+    border: 2px solid red;
+    border-radius: 4px;
+}
+.inputApc {
+    border: 2px solid green;
+    border-radius: 4px;
+}
+.form form span {
+    font-size: 0.6rem;
+}
+.form form span {
+    margin: 5px 0 0 0;
+}
+.spanNot {
+    color: red;
+}
+.spanOk {
+    color: green;
+}
+@media screen and (min-width: 834px) {
+    .form h5 {
+        width: 370px;
+        font-size: 2rem;
+        border-bottom: 5px solid #AACE9B;
+        transition: all .5s ease;
+    }
+    .form form span {
+        font-size: 1rem;
+    }
+    form div input, form div select {
+        height: 50px;
+        width: 750px;
+        margin-top: 40px;
+        font-size: 1.5rem;
+        transition: all .5s ease;
+    }
+    form div input::placeholder {
+        font-size: 1.5rem;
+    }
+    form textarea {
+        height: 200px;
+        width: 750px;
+        margin-top: 40px;
+        font: 1.25rem;
+        transition: all .5s ease;
+    }
+    form textarea::placeholder {
+        font-size: 1.5rem;
+    }
+    .formBtn {
+        width: 750px;
+        transition: all .5s ease;
+    }
+    .formBtn button, .formBtn input {
+        width: 150px;
+        height: 50px;
+        transition: all .5s ease;
+    }
+}
+@media screen and (min-width: 834px) {
+    .form textarea {
+        font-size: 1.5rem;
+    }
+}

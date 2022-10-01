@@ -45,7 +45,7 @@ window.onload = function () {
         tagName.classList.remove('inputApc');
         tagNameOk.innerHTML = '';
     }
-    email.onfocus = function() {
+    email.onfocus = function() {1   
        focusing(email,emailOk);
     }
     email.onblur = function () {
@@ -59,8 +59,10 @@ window.onload = function () {
     }
     password.onfocus = function() {
         focusing(password,passwordOk);
+        password.type = 'text';
     }
     password.onblur = function () {
+        password.type = 'password';
         if (passwordFn(passwordRegex,password.value) && passwordChars(password)) {
             addClass(password,passwordOk);
             accessPass = true;
@@ -72,8 +74,7 @@ window.onload = function () {
     loginBtn.onclick = function(e) {
         e.preventDefault();
         if (accessEmail && accessPass) {
-            loginBtn.value = 'Sent';
-            alert('Email: ' + email.value, 'Password' + password.value);
+            customFetch(email.value,password.value);
         } else if (!accessEmail && !accessPass){
             alert('Complete email and password');
         } else if (!accessEmail) {
@@ -84,4 +85,34 @@ window.onload = function () {
             alert('Complete form');
         }
     }
+    
+    function customFetch(email,password) {
+        var userOk = {
+            email:'rose@radiumrocket.com',
+            password:'BaSP2022'
+        }
+        if (userOk.email===email && userOk.password===password) {
+            userOkConcat = '?email='+userOk.email+'&password='+userOk.password;
+        } else {
+            userOkConcat = '';
+        }
+
+        fetch('https://basp-m2022-api-rest-server.herokuapp.com/login'+userOkConcat)
+            .then(function (res) {
+                return res.json();
+            })
+            .then(function (data) {
+                if (data.success) {
+                    alert('Employee logged\nEmail: '+userOk.email +'\nPassword: ' + userOk.password);
+                    console.log(data);
+                } else {
+                    alert('Unregistered employee\n'+ data.errors[0].msg + ' or is not registered');
+                    console.log(data);
+                }
+            })
+            .catch(function (err) {
+                console.error(err);
+            })   
+
+    }        
 }

@@ -1,0 +1,10 @@
+main{
+    transition: all .5s ease;
+}
+
+@media screen and (min-width: 1512px){
+    main {
+        margin: 126px 0 0 397px;
+        transition: all .5s ease;
+    }
+}
