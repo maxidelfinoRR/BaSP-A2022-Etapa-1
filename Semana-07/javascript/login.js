@@ -85,8 +85,7 @@ window.onload = function () {
             alert('Complete form');
         }
     }
-    
-    function customFetch(email,password) {
+    function customFetch(email,password) {   
         var userOk = {
             email:'rose@radiumrocket.com',
             password:'BaSP2022'
@@ -96,7 +95,6 @@ window.onload = function () {
         } else {
             userOkConcat = '';
         }
-
         fetch('https://basp-m2022-api-rest-server.herokuapp.com/login'+userOkConcat)
             .then(function (res) {
                 return res.json();
@@ -113,6 +111,5 @@ window.onload = function () {
             .catch(function (err) {
                 console.error(err);
             })   
-
     }        
 }

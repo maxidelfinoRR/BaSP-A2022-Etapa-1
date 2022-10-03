@@ -77,11 +77,9 @@ window.onload = function () {
         if (tagName.name === 'repeatPassword') {
             if(contentLetters(regex, tagName.value) && wordMinChars(tagName, n)) {
                 if (password.value === repeatPassword.value) {
-                    alert('Passwords match')
                     addClass(tagName, tagNameOk);
                     passed[pos] = true;
                 } else {
-                    alert('Passwords do not match')
                     removeClass(tagName, tagNameOk);
                     passed[pos] = false;
                 }
@@ -217,11 +215,9 @@ window.onload = function () {
             passed[9] = false;         
         } else {
             if (email.value === repeatEmail.value) {
-                alert('The emails match')
                 addClass(repeatEmail, repeatEmailOk);
                 passed[9] = true;
             } else {
-                alert('The emails do match match')
                 removeClass(repeatEmail, repeatEmailOk);
                 passed[9] = false;
             }
@@ -244,6 +240,9 @@ window.onload = function () {
     //BTN
     signUpBtn.onclick = function(e) {
         e.preventDefault();
+        customFetch()
+    }    
+    function customFetch() {
         var cont = 0;
         for (let i = 0; i < passed.length; i++) {
             if (passed[i]) {
@@ -251,9 +250,32 @@ window.onload = function () {
             }
         }
         if (cont == passed.length) {
-            alert('Name: ' + name.value + '\n' + 'Last name: ' + lastName.value + '\n' + 'DNI: ' + dni.value + '\n' + 'Date of birth: ' + dateBirth.value + '\n' + 'Phone: ' + phone.value + '\n' + 'Address: ' + address.value + '\n' + 'Location: ' + location.value + '\n' + 'Zip code: ' + zipCode.value + '\n' + 'Email: ' + email.value + '\n' + 'Password: ' + password.value);
+            var state = true
+            localStorage.setItem('name', name.value);
+            localStorage.setItem('lastName', lastName.value);
+            localStorage.setItem('dni', dni.value);
+            localStorage.setItem('dateBirth', dateBirth.value);
+            localStorage.setItem('phone', phone.value);
+            localStorage.setItem('address', address.value);
+            localStorage.setItem('location', location.value);
+            localStorage.setItem('zipCode', zipCode.value);
+            localStorage.setItem('email', email.value);
+            localStorage.setItem('password', password.value);
         } else {
-            alert('form incomplete');
+            console.log('form incomplete');
+            state = false
         }
-    }
+        fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup')
+            .then(function (res) {
+                return res.json();
+            })
+            .then(function (data) {
+                data.success = state;
+                console.log(data);
+            })
+            .catch(function (err) {
+                console.error(err);
+            })   
+    } 
+
 }
