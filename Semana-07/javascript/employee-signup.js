@@ -34,14 +34,12 @@ window.onload = function () {
     function addClass(tagName, tagNameOk) {
         tagName.classList.remove('inputErr');
         tagName.classList.add('inputApc');
-        tagNameOk.innerHTML = 'Valid ' + tagName.name;
         tagNameOk.classList.add('spanOk');
         tagNameOk.classList.remove('spanNot');
     }
     function removeClass(tagName,tagNameOk) {
         tagName.classList.add('inputErr');
         tagName.classList.remove('inputApc');
-        tagNameOk.innerHTML = 'Please enter a valid ' + tagName.name;
         tagNameOk.classList.add('spanNot');
         tagNameOk.classList.remove('spanOk');
     }
@@ -78,9 +76,11 @@ window.onload = function () {
             if(contentLetters(regex, tagName.value) && wordMinChars(tagName, n)) {
                 if (password.value === repeatPassword.value) {
                     addClass(tagName, tagNameOk);
+                    repeatPasswordOk.innerHTML = 'The password match'; 
                     passed[pos] = true;
                 } else {
                     removeClass(tagName, tagNameOk);
+                    repeatPasswordOk.innerHTML = 'Password don`t match'; 
                     passed[pos] = false;
                 }
             } else {
@@ -88,41 +88,94 @@ window.onload = function () {
             }
         } else {
             if(contentLetters(regex, tagName.value) && wordMinChars(tagName, n) ) {
+                tagNameOk.innerHTML = 'Valid ' + tagName.name;
                 addClass(tagName, tagNameOk);
                 passed[pos] = true;
-            } else {
+            } else if (!wordMinChars(tagName, n)) {
+                tagNameOk.innerHTML = 'Must have at least '+ n +' characters';
                 removeClass(tagName, tagNameOk);
                 passed[pos] = false;
+            } else if (!contentLetters(regex, tagName.value)) {
+                if (tagName.name == 'name' || tagName.name == 'last name') {
+                    tagNameOk.innerHTML = 'Must contain only letters';
+                    removeClass(tagName, tagNameOk);
+                    passed[pos] = false;
+                } else if (tagName.name == 'dni' || tagName.name == 'phone'){
+                    tagNameOk.innerHTML = 'Must contain only numbers';
+                    removeClass(tagName, tagNameOk);
+                    passed[pos] = false;
+                } else if (tagName.name == 'password'){
+                    tagNameOk.innerHTML = 'Must contain only letters and numbers';
+                    removeClass(tagName, tagNameOk);
+                    passed[pos] = false;
+                }
             }
         }
     }
-    function letterSpace(txt){
-        var arrayCharacters = txt.split('');
+    function letterSpace(txt,tagNameOk){
+        var arrayCharacters = txt.value.split('');
+        var contSpace = 0
         for(var i=0; i<arrayCharacters.length; i++) {
             if (arrayCharacters[i] == " ") {
+                    contSpace++;
                 if (arrayCharacters[0] == " ") {
-                    return false;   
+                    tagNameOk.innerHTML = 'Must only contain a spaces between letters';
+                    return false;
                 }
-            if (arrayCharacters[i+1] == " ")
-            {
-                return false;
-            }
-            if (arrayCharacters[arrayCharacters.length - 1] == " ")
-            {
-                return false;
+                if (arrayCharacters[i+1] == " "){
+                    tagNameOk.innerHTML = 'Must only contain a spaces between letters';
+                    return false;
+                }
+                if (arrayCharacters[arrayCharacters.length - 1] == " "){
+                    tagNameOk.innerHTML = 'Must only contain a spaces between letters';
+                    return false;
+                }
             }
         }
+        console.log(contSpace);
+        if (contSpace > 1) {
+            tagNameOk.innerHTML = 'Must only contain a spaces between letters';
+            return false;
+        } 
+        if (txt.name == 'address' && contSpace === 1){
+            return true;
         }
-        return true;
+        if (txt.name !== 'address' && contSpace === 0){
+            return true;
+        }
+        tagNameOk.innerHTML = 'Must only contain a spaces between letters';
+        return false
     }
     function withSpace(regex, tagName, tagNameOk, n, pos) {
-        if (contentLetters(regex, tagName.value) && wordMinChars(tagName, n) && letterSpace(tagName.value)) {
+        if (contentLetters(regex, tagName.value) && wordMinChars(tagName, n) && letterSpace(tagName,tagNameOk)) {
             addClass(tagName, tagNameOk);
+            tagNameOk.innerHTML = 'Valid ' + tagName.name;
             passed[pos] = true;
+        } else if (tagName.value.length === 0) {
+            tagNameOk.innerHTML = 'Field cannot be empty';
+            removeClass(tagName, tagNameOk);
+        }else if (!wordMinChars(tagName, n)) {
+            tagNameOk.innerHTML = 'Must have at least '+ n +' characters';
+            removeClass(tagName, tagNameOk);
+            passed[pos] = false;
+        } else if (!contentLetters(regex, tagName.value)) {
+            tagNameOk.innerHTML = 'Must contain only letters, numbers and a space';
+            removeClass(tagName, tagNameOk);
+            passed[pos] = false; 
         } else {
             removeClass(tagName, tagNameOk);
             passed[pos] = false;
         }
+    }
+    function calculateAge(date) {
+        var today = new Date();
+        var birthday = new Date(date);
+        var age = today.getFullYear() - birthday.getFullYear();
+        var m = today.getMonth() - birthday.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthday.getDate())) {
+            age--;
+        }
+        return age;
     }
     //NAME
     name.onfocus = function() {
@@ -143,18 +196,41 @@ window.onload = function () {
         focusing(dni, dniOk);
     }
     dni.onblur = function() {
-        validateFields(numberRegex, dni, dniOk, 7, 2);
+        if(contentLetters(numberRegex, dni.value) && wordMinChars(dni, 7) && wordMaxChars(dni, 8)) {
+            addClass(dni, dniOk);
+            dniOk.innerHTML = 'Valid ' + dni.name;
+            passed[2] = true;
+        } else if (!wordMinChars(dni, 7) || !wordMaxChars(dni, 8)) {
+            dniOk.innerHTML = 'Must only have between 7 and 8 numbers';
+            removeClass(dni, dniOk);
+            passed[2] = false;
+        } else if (!contentLetters(regex, dni.value)) {
+            dniOk.innerHTML = 'Must contain only numbers';
+            removeClass(dni, dniOk);
+            passed[2] = false;
+        }else {
+            removeClass(dni, dniOk);
+            passed[2] = false;
+        }
     }
     //DATE OF BIRTH
     dateBirth.onfocus = function() {
         focusing(dateBirth, dateBirthOk);
     }
-    dateBirth.onblur = function() {
-        if (isNaN(Date.parse(dateBirth.value)) === false) {
+    dateBirth.onblur = function() {     
+        if (calculateAge(dateBirth.value)>17 && isNaN(Date.parse(dateBirth.value)) === false){
             addClass(dateBirth,dateBirthOk);
+            newDate = dateBirth.value[5]+dateBirth.value[6]+'/'+dateBirth.value[8]+dateBirth.value[9]+'/'+dateBirth.value[0]+dateBirth.value[1]+dateBirth.value[2]+dateBirth.value[3];
+            console.log(newDate);
             passed[3]=true;
-        } else {
+        } else if (calculateAge(dateBirth.value)<18) {
+            dateBirthOk.innerHTML = 'You must be of legal age';
             removeClass(dateBirth,dateBirthOk);
+            passed[3]=false;
+        }
+        else {
+            removeClass(dateBirth,dateBirthOk);
+            dateBirthOk.innerHTML = 'Field cannot be empty';
             passed[3]=false;
         }
     }
@@ -163,7 +239,22 @@ window.onload = function () {
         focusing(phone, phoneOk);
     }
     phone.onblur = function() {
-        validateFields(numberRegex, phone, phoneOk, 10, 4);
+        if(contentLetters(numberRegex, phone.value) && wordMinChars(phone, 10) && wordMaxChars(phone, 10)) {
+            addClass(phone, phoneOk);
+            phoneOk.innerHTML = 'Valid ' + phone.name;
+            passed[4] = true;
+        } else if (!wordMinChars(phone, 10) || !wordMaxChars(phone, 10)) {
+            phoneOk.innerHTML = 'Must have only 10 numbers';
+            removeClass(phone, phoneOk);
+            passed[4] = false;
+        } else if (!contentLetters(regex, phone.value)) {
+            phoneOk.innerHTML = 'Must contain only numbers';
+            removeClass(phone, phoneOk);
+            passed[4] = false;
+        }else {
+            removeClass(phone, phoneOk);
+            passed[4] = false;
+        }
     }
     //ADDRESS
     address.onfocus = function() {
@@ -186,8 +277,17 @@ window.onload = function () {
     zipCode.onblur = function() {
         if(contentLetters(numberRegex, zipCode.value) && wordMinChars(zipCode, 4) && wordMaxChars(zipCode, 5)) {
             addClass(zipCode, zipCodeOk);
+            zipCodeOk.innerHTML = 'Valid ' + zipCode.name;
             passed[7] = true;
-        } else {
+        } else if (!wordMinChars(zipCode, 4) || !wordMaxChars(zipCode, 5)) {
+            zipCodeOk.innerHTML = 'Must only have between 4 and 5 numbers';
+            removeClass(zipCode, zipCodeOk);
+            passed[7] = false;
+        } else if (!contentLetters(regex, zipCode.value)) {
+            zipCodeOk.innerHTML = 'Must contain only numbers';
+            removeClass(zipCode, zipCodeOk);
+            passed[7] = false;
+        }else {
             removeClass(zipCode, zipCodeOk);
             passed[7] = false;
         }
@@ -198,9 +298,11 @@ window.onload = function () {
     }
     email.onblur = function () {
         if (!email.value.match(emailRegex)) {
+            emailOk.innerHTML = 'Please enter a valid email';
             removeClass(email, emailOk);
             passed[8] = false;
         } else {
+            emailOk.innerHTML = 'Valid email';
             addClass(email, emailOk);
             passed[8] = true;
         }
@@ -211,14 +313,17 @@ window.onload = function () {
     }
     repeatEmail.onblur = function () {
         if (!repeatEmail.value.match(emailRegex)) {
-            removeClass(repeatEmail, repeatEmailOk); 
+            removeClass(repeatEmail, repeatEmailOk);
+        repeatEmailOk.innerHTML = 'Please enter a valid email'; 
             passed[9] = false;         
         } else {
             if (email.value === repeatEmail.value) {
                 addClass(repeatEmail, repeatEmailOk);
+                repeatEmailOk.innerHTML = 'The emails match'; 
                 passed[9] = true;
             } else {
                 removeClass(repeatEmail, repeatEmailOk);
+                repeatEmailOk.innerHTML = 'Emails don`t match'; 
                 passed[9] = false;
             }
         }
@@ -240,9 +345,6 @@ window.onload = function () {
     //BTN
     signUpBtn.onclick = function(e) {
         e.preventDefault();
-        customFetch()
-    }    
-    function customFetch() {
         var cont = 0;
         for (let i = 0; i < passed.length; i++) {
             if (passed[i]) {
@@ -250,32 +352,36 @@ window.onload = function () {
             }
         }
         if (cont == passed.length) {
-            var state = true
-            localStorage.setItem('name', name.value);
-            localStorage.setItem('lastName', lastName.value);
-            localStorage.setItem('dni', dni.value);
-            localStorage.setItem('dateBirth', dateBirth.value);
-            localStorage.setItem('phone', phone.value);
-            localStorage.setItem('address', address.value);
-            localStorage.setItem('location', location.value);
-            localStorage.setItem('zipCode', zipCode.value);
-            localStorage.setItem('email', email.value);
-            localStorage.setItem('password', password.value);
+            customFetch()
         } else {
-            console.log('form incomplete');
-            state = false
+            alert('form incomplete');
         }
-        fetch('https://basp-m2022-api-rest-server.herokuapp.com/signup')
+    }    
+    function customFetch() {
+        var url = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?name=' + name.value + '&lastName=' + lastName.value+ '&dni=' + dni.value+ '&dob=' + newDate + '&phone=' + phone.value+ '&address=' + address.value+ '&city=' + location.value+ '&zip=' + zipCode.value+ '&email=' + email.value+ '&password=' + password.value;
+        fetch(url)
             .then(function (res) {
                 return res.json();
             })
             .then(function (data) {
-                data.success = state;
-                console.log(data);
+                if (data.success) {
+                    localStorage.setItem('name', name.value);
+                    localStorage.setItem('lastName', lastName.value);
+                    localStorage.setItem('dni', dni.value);
+                    localStorage.setItem('dateBirth', newDate);
+                    localStorage.setItem('phone', phone.value);
+                    localStorage.setItem('address', address.value);
+                    localStorage.setItem('location', location.value);
+                    localStorage.setItem('zipCode', zipCode.value);
+                    localStorage.setItem('email', email.value);
+                    localStorage.setItem('password', password.value);
+                    alert(data.msg + '\nName: ' + data.data.name + '\nLast Name: ' + data.data.lastName + '\nDNI ' + data.data.dni + '\nDate of Birth ' + data.data.dob + '\nPhone ' + data.data.phone+ '\nAddress ' + data.data.address + '\nLocation ' + data.data.city + '\nZip Code ' + data.data.zip + '\nEmail ' + data.data.email + '\nPassword ' + data.data.password);
+                } else {
+                    console.log('form incomplete');
+                }
             })
             .catch(function (err) {
                 console.error(err);
             })   
-    } 
-
+    }
 }

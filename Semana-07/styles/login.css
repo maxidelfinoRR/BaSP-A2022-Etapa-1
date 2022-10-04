@@ -35,9 +35,8 @@
 }
 .loginMain form {
     display: flex;
-    align-items: flex-start;
 }
-.loginMain form p {
+.loginMain form label, .loginMain form div p {
     margin: 10px 0;
     font-size: 0.7rem;
     font-weight: bold;
@@ -88,7 +87,8 @@
     font-size: 0.6rem;
 }
 .loginMain form span {
-    margin: 10px 0 0 0;
+    width: 80%;
+    text-align: center;
 }
 .spanNot {
     color: red;
@@ -112,7 +112,7 @@
     .loginMain form input::placeholder {
         font-size: 0.7rem;
     }
-    .loginFooter div p {
+    .loginFooter div p a {
         font-size: 1rem;
     }
     .loginFooter div a img {
@@ -138,7 +138,7 @@
         margin: 0 0 0 45px;
         width: 30px;
     }
-    .loginMain form p {
+    .loginMain form label, .loginMain form div p, .loginMain form p a {
         font-size: 1.2rem;
     }
     .loginMain form input {
