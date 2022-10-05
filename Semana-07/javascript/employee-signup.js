@@ -132,7 +132,6 @@ window.onload = function () {
                 }
             }
         }
-        console.log(contSpace);
         if (contSpace > 1) {
             tagNameOk.innerHTML = 'Must only contain a spaces between letters';
             return false;
@@ -221,8 +220,8 @@ window.onload = function () {
         if (calculateAge(dateBirth.value)>17 && isNaN(Date.parse(dateBirth.value)) === false){
             addClass(dateBirth,dateBirthOk);
             newDate = dateBirth.value[5]+dateBirth.value[6]+'/'+dateBirth.value[8]+dateBirth.value[9]+'/'+dateBirth.value[0]+dateBirth.value[1]+dateBirth.value[2]+dateBirth.value[3];
-            console.log(newDate);
             passed[3]=true;
+            dateBirthOk.innerHTML = 'Valid birth date';
         } else if (calculateAge(dateBirth.value)<18) {
             dateBirthOk.innerHTML = 'You must be of legal age';
             removeClass(dateBirth,dateBirthOk);

@@ -78,8 +78,6 @@ _• Dom Management_
 
 _• Form validation_
 
-_• Use of ECMAScript 5_
-
 ### Display of work done in week 06
 ```
 https://maxidelfinorr.github.io/BaSP-A2022-Etapa-1/Semana-06/index.html
@@ -89,6 +87,29 @@ https://maxidelfinorr.github.io/BaSP-A2022-Etapa-1/Semana-06/index.html
 https://docs.google.com/document/d/10u09v6OmNlrvumM22czlYcl-M9SH7Apo28NtKFG7WQ0/edit?usp=sharing
 ```
 
+---
+_During **week 06** we work with the following tools:_
+
+![](https://skills.thijs.gg/icons?i=html)
+![](https://skills.thijs.gg/icons?i=css)
+![](https://skills.thijs.gg/icons?i=js)
+![](https://skills.thijs.gg/icons?i=git)
+![](https://skills.thijs.gg/icons?i=github)
+
+_• Use of ECMAScript 5_
+
+_• Dom Management_
+
+_• Form validation_
+
+_• API consumption_
+
+_• Handling of promises and asynchrony_
+
+### Display of work done in week 06
+```
+https://maxidelfinorr.github.io/BaSP-A2022-Etapa-1/Semana-07/index.html
+```
 ---
 
 ## Clone repository 🔧

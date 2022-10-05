@@ -118,14 +118,16 @@ window.onload = function () {
   var modal = document.getElementById('modal');
   function modalTrue () {
     modal.innerHTML = `
-      <h4>TRACKGENIX</h4>
-      <p>WHO ARE YOU?</p>
-      <ul>
-        <li><a href="#">Employee/Employee PM</a></li>
-        <li>Admin</li>
-        <li>SuperAdmin</li>
-      </ul>
-      <button id="btnModal">Close</button>
+      <div>
+        <h4>TRACKGENIX</h4>
+        <p>WHO ARE YOU?</p>
+        <ul>
+          <li><a href="#">Employee/Employee PM</a></li>
+          <li><a href="#">Admin</a></li>
+          <li><a href="#">SuperAdmin</a></li>
+        </ul>
+        <button id="btnModal">Close</button>
+      </div>
     `
     bntClose()
   }
@@ -136,11 +138,8 @@ window.onload = function () {
       `
       bntClose()
   }
-  
   function bntClose() {
-    var btnModal = document.getElementById('btnModal')
-    console.log(btnModal);
-  
+    var btnModal = document.getElementById('btnModal')  
     btnModal.onclick = function(e) {
       e.preventDefault();
       console.log('btn funciona');
