@@ -7,22 +7,92 @@
     left: 0;
     width: 100%;
     height: 100vh;
+    font-family: 'Roboto';
     background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
     z-index: 200;
 }
 #modal div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     width: 80%;
-    height: 50%;
+    height: 70%;
     background-color: #fff;
-
+    border-radius: 7px;
+    transition: all .5s;
+    transform: translateY(0%);
+}
+.modal-close {
+    transform: translateY(-200%);
 }
 #modal h4{
-    color: blueviolet ;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 56px;
+    letter-spacing: 0.3em;
+    color: #373867;
+}
+#modal .notModal h4 {
+    width: 70%;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 30px;
+    font-size: 1.5rem;
+    color: #373867;
+}
+#modal p {
+    font-size: 1.24rem;
+    color: #373867;
+}
+#modal ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 230px;
+    height: 30px;
+    margin: 20px 0;
+    border-radius: 5px;
+    background-color: #373867;
+    text-align: center;
+    list-style: none;
+    transition: 1000ms;
+    transform: translateY(0);
+}
+#modal ul li:hover{
+    height: 40px;
+    background: #AACE9B;
+    cursor: pointer;
+    transition: .5s;
+    transform: translateY(-0px);
+}
+#modal ul li a {
+    color: #fff;
+}
+#modal ul li:hover a {
+    font-weight: bold;
+    color: #373867;
+    transition: .5s;
 }
 #modal #btnModal {
-    color: red;
+    color: #fff;
+    background-color: #373867;
+    padding: 10px 30px;
+    border: 2px solid #373867;
+    border-radius: 50px;
+    transition : 1000ms;
+    transform: translateY(0);
+    cursor: pointer;
+}
+#modal #btnModal:hover {
+    background: #AACE9B;
+    padding: 10px 50px;
+    border: 2px solid #AACE9B;
+    color: #373867;
+    font-weight: bold;
+    transition: 1000ms;
+    transform: translateY(-0px);
 }

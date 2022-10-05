@@ -8,7 +8,6 @@ window.onload = function () {
   var passwordRegex = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',0,1,2,3,4,5,6,7,8,9];
   var accessEmail = false;
   var accessPass = false;
-
   function passwordChars(password) {
     if (password.value.length >= 8) {
       return true;
@@ -104,47 +103,78 @@ window.onload = function () {
       .then(function (data) {
         if (data.success) {
           modalTrue();
-          alert(data.msg)
         } else {
           modalFalse();
-          alert(data.msg)
         }
       })
       .catch(function (err) {
         console.error(err);
-        alert(data.msg)
+        console.error(data.msg);
       })   
   }   
   var modal = document.getElementById('modal');
+  var btnEmployee = document.getElementById('btnEmployee');
+  var btnAdmin = document.getElementById('btnAdmin');
+  var btnSuperAdmin = document.getElementById('btnSuperAdmin');
+  var anchorEmployee = document.getElementsByTagName('a')[3]
+  var anchorAdmin = document.getElementsByTagName('a')[4]
+  var anchorSuperAdmin = document.getElementsByTagName('a')[5]
+  /*btnEmployee.onclick = function() {
+    // anchorEmployee.href = '#';  -- This way we will go to the employee section --
+    console.log('Employee/Employee PM');
+  }
+  btnAdmin.onclick = function() {
+    // anchorAdmin.href = '#';  -- This way we will go to the Admin section --
+    console.log('Admin');
+  }
+  btnSuperAdmin.onclick = function() {
+    // anchorSuperAdmin.href = '#';  -- This way we will go to the SuperAdmin section --
+    console.log('Super Admin');
+  } */
   function modalTrue () {
     modal.innerHTML = `
-      <div>
+      <div id="modal-div">
         <h4>TRACKGENIX</h4>
         <p>WHO ARE YOU?</p>
         <ul>
-          <li><a href="#">Employee/Employee PM</a></li>
-          <li><a href="#">Admin</a></li>
-          <li><a href="#">SuperAdmin</a></li>
+          <li id="btnEmployee"><a href="#employee">Employee/Employee PM</a></li>
+          <li id="btnAdmin"><a href="#">Admin</a></li>
+          <li id="btnSuperAdmin"><a href="#">SuperAdmin</a></li>
         </ul>
         <button id="btnModal">Close</button>
       </div>
     `
-    bntClose()
+    modal.style.opacity = '1';
+    modal.style.visibility = 'visible';
+    modal.classList.toggle('modal-close');
+    bntClose();
   }
   function modalFalse () {
     modal.innerHTML = `
-      <h4>NOT</h4>
-      <button id="btnModal">Close</button>
+      <div class="notModal">
+        <h4>Wrong email or password</h4>
+        <button id="btnModal">Close</button>
+      </div>
       `
+      modal.style.opacity = '1';
+      modal.style.visibility = 'visible';
+      modal.classList.toggle('modal-close');
       bntClose()
   }
   function bntClose() {
     var btnModal = document.getElementById('btnModal')  
     btnModal.onclick = function(e) {
       e.preventDefault();
-      console.log('btn funciona');
+      modal.style.opacity = '0';
+      modal.style.visibility = 'hidden';
+      modal.classList.toggle('modal-close');
     }
   }
-  
-
+  window.addEventListener('click', function(e){
+    if (e.target == modal) {
+      modal.style.opacity = '0';
+      modal.style.visibility = 'hidden';
+      modal.classList.toggle('modal-close');
+    }
+  })
 }
