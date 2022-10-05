@@ -375,12 +375,66 @@ window.onload = function () {
                     localStorage.setItem('email', email.value);
                     localStorage.setItem('password', password.value);
                     alert(data.msg + '\nName: ' + data.data.name + '\nLast Name: ' + data.data.lastName + '\nDNI ' + data.data.dni + '\nDate of Birth ' + data.data.dob + '\nPhone ' + data.data.phone+ '\nAddress ' + data.data.address + '\nLocation ' + data.data.city + '\nZip Code ' + data.data.zip + '\nEmail ' + data.data.email + '\nPassword ' + data.data.password);
+                    modalTrue();
                 } else {
                     console.log('form incomplete');
                 }
             })
             .catch(function (err) {
                 console.error(err);
-            })   
+            })
     }
+    var modal = document.getElementById('modal');
+    var btnEmployee = document.getElementById('btnEmployee');
+    var btnAdmin = document.getElementById('btnAdmin');
+    var btnSuperAdmin = document.getElementById('btnSuperAdmin');
+    var anchorEmployee = document.getElementsByTagName('a')[3]
+    var anchorAdmin = document.getElementsByTagName('a')[4]
+    var anchorSuperAdmin = document.getElementsByTagName('a')[5]
+    /*btnEmployee.onclick = function() {
+      // anchorEmployee.href = '#';  -- This way we will go to the employee section --
+      console.log('Employee/Employee PM');
+    }
+    btnAdmin.onclick = function() {
+      // anchorAdmin.href = '#';  -- This way we will go to the Admin section --
+      console.log('Admin');
+    }
+    btnSuperAdmin.onclick = function() {
+      // anchorSuperAdmin.href = '#';  -- This way we will go to the SuperAdmin section --
+      console.log('Super Admin');
+    } */
+    function modalTrue () {
+      modal.innerHTML = `
+        <div id="modal-div">
+          <h4>TRACKGENIX</h4>
+          <p>WHO ARE YOU?</p>
+          <ul>
+            <li id="btnEmployee"><a href="#employee">Employee/Employee PM</a></li>
+            <li id="btnAdmin"><a href="#">${name.value}</a></li>
+            <li id="btnSuperAdmin"><a href="#">SuperAdmin</a></li>
+          </ul>
+          <button id="btnModal">Close</button>
+        </div>
+      `
+      modal.style.opacity = '1';
+      modal.style.visibility = 'visible';
+      modal.classList.toggle('modal-close');
+      bntClose();
+    }
+    function bntClose() {
+      var btnModal = document.getElementById('btnModal')  
+      btnModal.onclick = function(e) {
+        e.preventDefault();
+        modal.style.opacity = '0';
+        modal.style.visibility = 'hidden';
+        modal.classList.toggle('modal-close');
+      }
+    }
+    window.addEventListener('click', function(e){
+      if (e.target == modal) {
+        modal.style.opacity = '0';
+        modal.style.visibility = 'hidden';
+        modal.classList.toggle('modal-close');
+      }
+    })
 }
